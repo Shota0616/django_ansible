@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: nginx 
+        state: latest
+
+  # 2. pipをインストールする
+    - name: Install pip
+      apt: 
+        name: pip
+        state: latest
+
